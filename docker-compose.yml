@@ -1,0 +1,29 @@
+version: '2.4'
+
+services:
+  portainer-web:
+    container_name: portainer-web
+    build: nginx/
+    restart: always
+    environment:
+      VIRTUAL_HOST: ${VIRTUAL_HOST}
+      LETSENCRYPT_HOST: ${VIRTUAL_HOST}
+      LETSENCRYPT_EMAIL: ${LETSENCRYPT_EMAIL}
+
+  portainer:
+    container_name: portainer-app
+    image: portainer/portainer
+    restart: always
+    command: --host=unix:///var/run/docker.sock
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+
+volumes:
+  portainer_data:
+
+networks:
+  default:
+    external:
+      name: portainer
+
