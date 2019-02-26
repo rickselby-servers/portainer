@@ -3,7 +3,7 @@ stages:
 
 include:
   - project: 'rickselby-linode-setup/nginx-proxy'
-  - file: '/.gitlab-ci-template.yml'
+    file: '/.gitlab-ci-template.yml'
 
 deploy:
   extends: .docker-template
