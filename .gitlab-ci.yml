@@ -11,8 +11,7 @@ deploy:
   script:
     - eval $COMPOSE_COMMAND build --pull
     - eval $COMPOSE_COMMAND pull 
-    - eval $COMPOSE_COMMAND down
-    - eval $COMPOSE_COMMAND up -d
+    - eval $COMPOSE_COMMAND up -d --remove-orphans
   only:
     - master
 
