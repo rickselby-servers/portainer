@@ -5,6 +5,9 @@ include:
   - project: 'rickselby-linode-setup/gitlab-ci-templates'
     file: '/deploy-template.yml'
 
+variables:
+  COMPOSE_FILE_PATH: docker-compose.yml
+
 deploy:
   extends: .docker-template
   stage: deploy
