@@ -6,8 +6,8 @@ services:
     build: nginx/
     restart: always
     environment:
-      VIRTUAL_HOST: ${VIRTUAL_HOST}
-      LETSENCRYPT_HOST: ${VIRTUAL_HOST}
+      VIRTUAL_HOST: portainer.djomp.co.uk
+      LETSENCRYPT_HOST: portainer.djomp.co.uk
       LETSENCRYPT_EMAIL: ${LETSENCRYPT_EMAIL}
 
   portainer:
