@@ -8,7 +8,7 @@ services:
     environment:
       VIRTUAL_HOST: portainer.djomp.co.uk
       LETSENCRYPT_HOST: portainer.djomp.co.uk
-      LETSENCRYPT_EMAIL: ${LETSENCRYPT_EMAIL}
+      LETSENCRYPT_EMAIL:
 
   portainer:
     container_name: portainer-app
