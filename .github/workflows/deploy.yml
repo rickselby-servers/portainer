@@ -16,6 +16,7 @@ jobs:
           CLIENT_KEY: ${{ secrets.CLIENT_KEY }}
       - uses: rickselby-web-server/actions/docker-compose-deploy@main
         with:
+          CONNECT_CONTAINERS: nginx-proxy
           STACK_NAME: portainer
         env:
           DOCKER_HOST: ${{ secrets.REMOTE_DOCKER_HOST }}
