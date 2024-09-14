@@ -1,2 +1,2 @@
 # Declared in a Dockerfile so dependabot can watch for updates
-FROM portainer/portainer-ce:2.21.0-alpine
+FROM portainer/portainer-ce:2.21.1-alpine
