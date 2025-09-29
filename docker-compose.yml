@@ -20,6 +20,8 @@ services:
       - portainer_data:/data
     ports:
       - '8000:8000'
+    environment:
+      - TRUSTED_ORIGINS=portainer.djomp.co.uk
 
 volumes:
   portainer_data:
